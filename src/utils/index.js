@@ -18,7 +18,7 @@ function checkConnect (array, currentPlayer, index) {
         deepIndex -= 6
     }
     const rowArr = array.slice(6 * row, (6 * row) + 6 )
-    console.log(rowArr);
+    //console.log(rowArr);
    
     let foundColWinner = false;    
     if (collArr.length === 4) {        
@@ -29,10 +29,11 @@ function checkConnect (array, currentPlayer, index) {
     }
     let matchCount = 0;
     let foundRowWinner = false;
+    console.log(rowArr)
     for (let x=1; x<rowArr.length; x++) {   
         console.log(matchCount);
         //if (x!==0) {
-            if (rowArr[x] === rowArr[x-1] && row[x] === currentPlayer) {
+            if (rowArr[x] === rowArr[x-1] && rowArr[x] === currentPlayer) {
                 matchCount++;
                 if (matchCount===3) {
                     foundRowWinner=true;
