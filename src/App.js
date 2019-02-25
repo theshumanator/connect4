@@ -28,6 +28,15 @@ class App extends Component {
   );
   }
 
+
+  componentDidUpdate () {
+    // checkWin()
+    // if prevstate.gameTable !== this.state.gameTable
+
+
+
+  }
+
   //TODO write onUpdate thing to calc winner
   
   handleMove = (event) => {
@@ -37,8 +46,16 @@ class App extends Component {
       const output =  {
         gameTable: [...prevState.gameTable]          
        };
+
+       // checkConnect goes in moveID
+
       output.gameTable[moveID]= prevState.currentTurn;
-      output.currentTurn =prevState.currentTurn === prevState.user1?prevState.user2:prevState.user1
+      output.currentTurn =prevState.currentTurn === prevState.user1 ? prevState.user2 : prevState.user1
+
+      
+
+
+
       return  output;
     });
     
