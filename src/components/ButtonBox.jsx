@@ -1,9 +1,9 @@
 import React from 'react';
 
-function ButtonBox () {
+function ButtonBox ({handleReset}) {
     return (
         <div>
-            <button>Reset Board</button>
+            <button onClick={handleReset}>Reset Board</button>
             <button>Change Users</button>
         </div>
     );
